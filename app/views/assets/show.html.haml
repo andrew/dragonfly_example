@@ -1,0 +1,22 @@
+%h1 Viewing asset
+
+%div[current_object]
+  %p.image_uid
+    %strong Image uid
+    = h current_object.image_uid
+
+%p
+  = image_tag current_object.image.url('200x200#')
+  = link_to current_object.image.url('200x200#'), current_object.image.url('200x200#')
+%p
+  = image_tag current_object.image.url('100x100')
+  = link_to current_object.image.url('100x100'), current_object.image.url('100x100')
+%p
+  = image_tag current_object.image.url
+  = link_to current_object.image.url, current_object.image.url
+
+= link_to 'Edit', edit_object_path
+|
+= link_to 'Destroy', object_path, :confirm => 'Really destroy asset?', :method => :delete
+|
+= link_to 'Back', objects_path

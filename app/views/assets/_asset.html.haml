@@ -1,0 +1,11 @@
+%div[asset]
+  = image_tag asset.image.url('50x50#')
+  %p.image_uid
+    %strong Image uid
+    = h asset.image_uid
+
+  = link_to 'Show', object_path(asset)
+  |
+  = link_to 'Edit', edit_object_path(asset)
+  |
+  = link_to 'Destroy', object_path(asset), :confirm => 'Really destroy asset?', :method => :delete
