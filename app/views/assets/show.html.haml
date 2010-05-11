@@ -6,6 +6,10 @@
     = h current_object.image_uid
 
 %p
+  = image_tag current_object.image.url('300x300+10+50')
+  = link_to current_object.image.url('300x300+10+50'), current_object.image.url('300x300+10+50')
+
+%p
   = image_tag current_object.image.url('200x200#')
   = link_to current_object.image.url('200x200#'), current_object.image.url('200x200#')
 %p
